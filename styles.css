@@ -661,6 +661,16 @@ button {
   grid-template-columns: 0.9fr 1.1fr;
 }
 
+.card-media-poster {
+  background: var(--black);
+}
+
+.card-media-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .project-card:hover {
   transform: translateY(-7px);
   box-shadow: 0 26px 60px rgba(0, 0, 0, 0.34);
