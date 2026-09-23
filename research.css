@@ -72,7 +72,7 @@
 .project-lede {
   max-width: 760px;
   margin: 30px 0 0;
-  color: rgba(254, 254, 254, 0.75);
+  color: rgba(254, 254, 254, 0.9);
   font-size: clamp(1.08rem, 1.8vw, 1.4rem);
   line-height: 1.6;
 }
@@ -154,15 +154,23 @@
 }
 
 .project-mark-education {
-  align-items: flex-start;
+  min-height: 390px;
+  align-items: center;
+  text-align: center;
   background:
     repeating-linear-gradient(135deg, transparent 0 18px, rgba(254, 254, 254, 0.045) 18px 20px),
     var(--red);
 }
 
+.project-mark-education span {
+  font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+  letter-spacing: -0.045em;
+  white-space: nowrap;
+}
+
 .project-mark-education strong {
   margin-block: 9px;
-  font-size: clamp(4rem, 8vw, 7rem);
+  font-size: clamp(3rem, 5vw, 4.5rem);
 }
 
 .project-mark-ai {
@@ -239,7 +247,7 @@
 
 .project-section > p,
 .project-section li {
-  color: var(--muted);
+  color: #302f2c;
 }
 
 .project-section > p {
@@ -302,7 +310,7 @@
 
 .insight-card p {
   margin: 13px 0 0;
-  color: var(--muted);
+  color: #3e3c38;
   font-size: 0.9rem;
 }
 
@@ -330,7 +338,7 @@
 
 .framework-item p {
   margin: 0;
-  color: var(--muted);
+  color: #302f2c;
 }
 
 .numbered-findings {
@@ -386,7 +394,7 @@
 }
 
 .snapshot dt {
-  color: var(--muted);
+  color: #4a4843;
   font-size: 0.66rem;
   font-weight: 900;
   letter-spacing: 0.1em;
@@ -402,7 +410,7 @@
 .privacy-note {
   margin-top: 18px;
   padding: 22px;
-  color: rgba(254, 254, 254, 0.76);
+  color: rgba(254, 254, 254, 0.92);
   background: var(--green);
   font-size: 0.85rem;
 }
@@ -458,7 +466,7 @@
 }
 
 .artifact-copy p {
-  color: rgba(254, 254, 254, 0.75);
+  color: rgba(254, 254, 254, 0.92);
 }
 
 .artifact-button {
@@ -482,7 +490,7 @@
 
 .related-project p {
   margin: 0;
-  color: rgba(254, 254, 254, 0.72);
+  color: rgba(254, 254, 254, 0.92);
 }
 
 .related-project a {
