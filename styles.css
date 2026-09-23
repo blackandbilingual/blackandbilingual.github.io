@@ -752,6 +752,85 @@ button {
   color: rgba(254, 254, 254, 0.7);
 }
 
+.wholesale-callout {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(38px, 6vw, 82px);
+  align-items: center;
+  margin-top: 72px;
+  padding: clamp(34px, 5vw, 70px);
+  color: var(--black);
+  background: var(--gold);
+  overflow: hidden;
+}
+
+.wholesale-visual {
+  min-height: 355px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 18px;
+  background: var(--green);
+}
+
+.wholesale-visual img {
+  width: 38%;
+  max-width: 180px;
+  height: auto;
+  aspect-ratio: 0.74;
+  object-fit: cover;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.34);
+}
+
+.wholesale-visual img:first-child {
+  transform: rotate(-7deg) translateX(16px);
+}
+
+.wholesale-visual img:nth-child(2) {
+  position: relative;
+  z-index: 2;
+  transform: translateY(-10px);
+}
+
+.wholesale-visual img:last-child {
+  transform: rotate(7deg) translateX(-16px);
+}
+
+.wholesale-copy .section-kicker {
+  color: var(--red);
+}
+
+.wholesale-copy h2 {
+  max-width: 690px;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+}
+
+.wholesale-copy > p:not(.section-kicker) {
+  max-width: 690px;
+  margin: 26px 0 0;
+  color: rgba(0, 0, 0, 0.75);
+  font-size: clamp(1rem, 1.4vw, 1.18rem);
+}
+
+.wholesale-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 24px;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.wholesale-link {
+  padding-block: 10px;
+  border-bottom: 2px solid var(--black);
+  font-weight: 900;
+}
+
+.wholesale-link:hover {
+  color: var(--red);
+  border-color: var(--red);
+}
+
 .ai-section {
   position: relative;
   overflow: hidden;
@@ -1333,6 +1412,10 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .wholesale-callout {
+    grid-template-columns: minmax(270px, 0.85fr) minmax(0, 1.15fr);
+  }
+
   .research-feature {
     grid-template-columns: minmax(0, 1.15fr) minmax(270px, 0.85fr);
   }
@@ -1498,6 +1581,25 @@ button {
 
   .project-card.has-media {
     min-height: 630px;
+  }
+
+  .wholesale-callout {
+    grid-template-columns: 1fr;
+    margin-top: 54px;
+    padding: 28px;
+  }
+
+  .wholesale-visual {
+    min-height: 300px;
+  }
+
+  .wholesale-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .wholesale-link {
+    width: fit-content;
   }
 
   .research-feature-visual {
