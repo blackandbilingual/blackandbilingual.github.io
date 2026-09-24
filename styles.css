@@ -612,6 +612,17 @@ button {
   overflow: hidden;
 }
 
+.card-media-blog {
+  height: auto;
+  flex-shrink: 0;
+}
+
+.card-media-blog img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .card-media-duo {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
