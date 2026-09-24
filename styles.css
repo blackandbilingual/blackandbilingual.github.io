@@ -1900,3 +1900,95 @@ button {
 @media (max-width:760px){
   .doctoral-project-grid{grid-template-columns:1fr;}
 }
+
+.doctoral-rose { --doctoral-accent: var(--rose); }
+.doctoral-orange { --doctoral-accent: #d97706; }
+.doctoral-indigo { --doctoral-accent: #4f46e5; }
+
+.doctoral-project-body { background: var(--paper); }
+.doctoral-project-intro {
+  display:grid;
+  grid-template-columns:minmax(0,1.1fr) minmax(260px,.55fr);
+  gap:clamp(34px,7vw,92px);
+  align-items:start;
+}
+.doctoral-project-copy section + section { margin-top:54px; }
+.doctoral-project-copy h2 {
+  margin:0 0 20px;
+  font-family:var(--heading);
+  font-size:clamp(2rem,4vw,3.8rem);
+  line-height:1;
+  letter-spacing:-.045em;
+}
+.doctoral-project-copy h3 {
+  margin:28px 0 12px;
+  font-family:var(--heading);
+  font-size:1.35rem;
+  line-height:1.1;
+}
+.doctoral-project-copy p,
+.doctoral-project-copy li {
+  color:var(--muted);
+  font-size:1.03rem;
+  line-height:1.75;
+}
+.doctoral-project-copy ul { padding-left:20px; }
+.doctoral-project-copy li + li { margin-top:8px; }
+.doctoral-detail-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px;
+  margin-top:24px;
+}
+.doctoral-detail-card {
+  padding:24px;
+  background:var(--white);
+  border-top:4px solid var(--gold);
+  box-shadow:0 10px 28px rgba(23,23,23,.07);
+}
+.doctoral-detail-card h3 {
+  margin:0;
+  font-size:1.15rem;
+}
+.doctoral-detail-card p {
+  margin:10px 0 0;
+  font-size:.95rem;
+}
+.doctoral-project-aside dl { margin:0; }
+.doctoral-project-aside div + div {
+  margin-top:18px;
+  padding-top:18px;
+  border-top:1px solid rgba(254,254,254,.18);
+}
+.doctoral-project-aside dt {
+  color:var(--gold);
+  font-size:.68rem;
+  font-weight:900;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+}
+.doctoral-project-aside dd { margin:5px 0 0; }
+.doctoral-pullquote {
+  margin:32px 0 0;
+  padding:24px 28px;
+  color:var(--white);
+  background:var(--green);
+  border-left:6px solid var(--gold);
+  font-size:1.15rem;
+  font-weight:700;
+}
+.doctoral-callout {
+  margin-top:30px;
+  padding:28px;
+  background:var(--gold);
+}
+.doctoral-callout strong {
+  display:block;
+  margin-bottom:8px;
+  font-family:var(--heading);
+  font-size:1.2rem;
+}
+.doctoral-callout p { margin:0; color:rgba(0,0,0,.72); }
+@media (max-width:760px){
+  .doctoral-project-intro,.doctoral-detail-grid{grid-template-columns:1fr;}
+}
