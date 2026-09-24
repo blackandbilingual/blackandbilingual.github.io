@@ -1673,3 +1673,152 @@ button {
     transform: none;
   }
 }
+
+
+/* Human-Centered AI project card: abstract system visual, no stock laptop imagery. */
+.hcai-card-art {
+  position: relative;
+  height: 190px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  color: var(--white);
+  background: linear-gradient(145deg, var(--purple), var(--green));
+}
+
+.hcai-card-art strong {
+  position: relative;
+  z-index: 3;
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  color: var(--black);
+  background: var(--gold);
+  border-radius: 50%;
+  font-family: var(--heading);
+  font-size: 1.7rem;
+}
+
+.hcai-ring {
+  position: absolute;
+  border: 1px solid rgba(254, 254, 254, 0.42);
+  border-radius: 50%;
+}
+
+.hcai-ring-one { width: 150px; height: 150px; }
+.hcai-ring-two { width: 245px; height: 245px; }
+
+.hcai-label {
+  position: absolute;
+  z-index: 4;
+  padding: 6px 9px;
+  color: var(--black);
+  background: var(--white);
+  border-radius: 999px;
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.hcai-people { top: 18px; left: 24px; }
+.hcai-culture { right: 20px; top: 76px; }
+.hcai-context { left: 36px; bottom: 18px; }
+
+.doctoral-work {
+  margin-top: 72px;
+  padding-top: 54px;
+  border-top: 1px solid var(--border);
+}
+
+.doctoral-work-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, .8fr);
+  gap: clamp(28px, 6vw, 80px);
+  align-items: end;
+}
+
+.doctoral-work-heading h3 {
+  max-width: 760px;
+  margin: 0;
+  font-family: var(--heading);
+  font-size: clamp(2.2rem, 4.5vw, 4.6rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.doctoral-work-heading > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.doctoral-work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.doctoral-card {
+  --doctoral-accent: var(--gold);
+  min-height: 290px;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(26px, 4vw, 40px);
+  color: var(--white);
+  background: var(--black);
+  border-top: 7px solid var(--doctoral-accent);
+}
+
+.doctoral-gold { --doctoral-accent: var(--gold); }
+.doctoral-green { --doctoral-accent: var(--green); }
+.doctoral-red { --doctoral-accent: var(--red); }
+.doctoral-blue { --doctoral-accent: var(--blue); }
+
+.doctoral-course {
+  margin: 0;
+  color: var(--doctoral-accent);
+  font-size: .68rem;
+  font-weight: 900;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.doctoral-card h4 {
+  margin: 20px 0 0;
+  font-family: var(--heading);
+  font-size: clamp(1.7rem, 3vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: -.035em;
+  line-height: 1.04;
+}
+
+.doctoral-card > p:not(.doctoral-course) {
+  margin: 20px 0 0;
+  color: rgba(254, 254, 254, .72);
+}
+
+.doctoral-card > span {
+  display: block;
+  margin-top: auto;
+  padding-top: 28px;
+  color: var(--doctoral-accent);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+  .doctoral-work-heading,
+  .doctoral-work-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .doctoral-card {
+    min-height: 0;
+  }
+}
