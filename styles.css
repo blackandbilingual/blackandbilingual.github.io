@@ -1822,3 +1822,81 @@ button {
     min-height: 0;
   }
 }
+
+.doctoral-purple { --doctoral-accent: var(--purple); }
+.doctoral-link {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:20px;
+  padding-top:18px;
+  color:var(--white);
+  border-top:1px solid rgba(254,254,254,.18);
+  font-weight:900;
+}
+.doctoral-link b { color:var(--doctoral-accent); font-size:1.15rem; }
+.doctoral-link:hover { color:var(--doctoral-accent); }
+.doctoral-project {
+  min-height:100vh;
+  background:var(--paper);
+  color:var(--ink);
+}
+.doctoral-project-hero {
+  padding:140px 0 72px;
+  color:var(--white);
+  background:var(--black);
+}
+.doctoral-project-hero .section-kicker { color:var(--gold); }
+.doctoral-project-hero h1 {
+  max-width:980px;
+  margin:0;
+  font-family:var(--heading);
+  font-size:clamp(3rem,7vw,7rem);
+  line-height:.98;
+  letter-spacing:-.05em;
+}
+.doctoral-project-hero .project-deck {
+  max-width:820px;
+  margin:28px 0 0;
+  color:rgba(254,254,254,.76);
+  font-size:clamp(1.08rem,1.8vw,1.35rem);
+}
+.doctoral-project-body { padding:72px 0 96px; }
+.doctoral-project-grid {
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(260px,.55fr);
+  gap:clamp(36px,7vw,100px);
+}
+.doctoral-project-copy h2 {
+  margin:0 0 22px;
+  font-family:var(--heading);
+  font-size:clamp(2rem,4vw,4rem);
+  letter-spacing:-.04em;
+  line-height:1;
+}
+.doctoral-project-copy p { color:var(--muted); font-size:1.04rem; }
+.doctoral-project-copy p + h2 { margin-top:52px; }
+.doctoral-project-aside {
+  align-self:start;
+  padding:28px;
+  color:var(--white);
+  background:var(--green);
+  border-top:7px solid var(--gold);
+}
+.doctoral-project-aside h3 {
+  margin:0 0 18px;
+  font-family:var(--heading);
+  font-size:1.4rem;
+}
+.doctoral-project-aside ul { margin:0; padding-left:18px; }
+.doctoral-project-aside li + li { margin-top:10px; }
+.project-back {
+  display:inline-flex;
+  margin-top:34px;
+  padding-bottom:5px;
+  border-bottom:2px solid var(--gold);
+  font-weight:900;
+}
+@media (max-width:760px){
+  .doctoral-project-grid{grid-template-columns:1fr;}
+}
