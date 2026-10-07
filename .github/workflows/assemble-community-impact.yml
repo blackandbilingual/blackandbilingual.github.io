@@ -14,9 +14,41 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Rebuild exact uploaded image
+      - name: Rebuild Community Impact image
         run: |
-          cat tmp/community-impact.part* | tr -d '\n' | base64 -d > assets/awards/community-impact.jpg
+          cat \
+            tmp/community-impact.part000 \
+            tmp/community-impact.part001 \
+            tmp/community-impact.part002 \
+            tmp/community-impact.part003 \
+            tmp/community-impact.part010 \
+            tmp/community-impact.part011 \
+            tmp/community-impact.part012 \
+            tmp/community-impact.part013 \
+            tmp/community-impact.part02 \
+            tmp/community-impact.part030 \
+            tmp/community-impact.part031 \
+            tmp/community-impact.part032 \
+            tmp/community-impact.part033 \
+            tmp/community-impact.part040 \
+            tmp/community-impact.part041 \
+            tmp/community-impact.part042 \
+            tmp/community-impact.part043 \
+            tmp/community-impact.part050 \
+            tmp/community-impact.part051 \
+            tmp/community-impact.part052 \
+            tmp/community-impact.part053 \
+            tmp/community-impact.part060 \
+            tmp/community-impact.part061 \
+            tmp/community-impact.part062 \
+            tmp/community-impact.part063 \
+            tmp/community-impact.part070 \
+            tmp/community-impact.part071 \
+            tmp/community-impact.part072 \
+            tmp/community-impact.part073 \
+            tmp/community-impact.part08 \
+            | tr -d '\n' | base64 -d > assets/awards/community-impact.jpg
+          test "$(wc -c < assets/awards/community-impact.jpg)" -gt 40000
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add assets/awards/community-impact.jpg
