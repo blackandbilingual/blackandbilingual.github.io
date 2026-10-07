@@ -2175,3 +2175,45 @@ button {
     min-height: 320px;
   }
 }
+
+
+/* Awards: keep original photos crisp and fully opaque. */
+#awards .reveal,
+#awards .reveal.is-visible {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+}
+
+#awards .award-photo,
+#awards .awards-story-photo {
+  position: relative;
+  background: transparent !important;
+}
+
+#awards .award-photo::before,
+#awards .award-photo::after,
+#awards .awards-story-photo::before,
+#awards .awards-story-photo::after {
+  content: none !important;
+  display: none !important;
+}
+
+#awards .award-photo img,
+#awards .awards-story-photo img {
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+  transform: none !important;
+  backface-visibility: hidden;
+  image-rendering: auto;
+}
+
+#awards .award-photo img {
+  object-fit: contain;
+  background: #111;
+}
+
+#awards .awards-story-photo img {
+  object-fit: cover;
+}
