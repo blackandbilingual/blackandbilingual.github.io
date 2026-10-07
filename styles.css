@@ -2217,3 +2217,46 @@ button {
 #awards .awards-story-photo img {
   object-fit: cover;
 }
+
+
+/* Awards image clarity fix: natural ratios, no dimming or overlays. */
+#awards .award-photo,
+#awards .award-photo-tall {
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  background: transparent !important;
+}
+
+#awards .award-photo img,
+#awards .award-photo-tall img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+  mix-blend-mode: normal !important;
+}
+
+#awards .awards-story-photo {
+  min-height: 0 !important;
+  height: auto !important;
+  background: transparent !important;
+}
+
+#awards .awards-story-photo img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+#awards .award-card,
+#awards .awards-story {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
