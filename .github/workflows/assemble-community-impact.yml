@@ -1,0 +1,24 @@
+name: Assemble Community Impact Image
+
+on:
+  push:
+    paths:
+      - 'tmp/community-impact.trigger'
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    if: github.event.head_commit.message == 'Assemble Community Impact award image'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rebuild exact uploaded image
+        run: |
+          cat tmp/community-impact.part* | tr -d '\n' | base64 -d > assets/awards/community-impact.jpg
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/awards/community-impact.jpg
+          git commit -m "Use exact Community Impact award photo" || exit 0
+          git push
